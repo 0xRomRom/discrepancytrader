@@ -1,0 +1,70 @@
+.modal {
+  width: 25rem;
+  height: 30rem;
+  background-color: rgb(26, 26, 26);
+  border-radius: 1rem;
+  color: white;
+  padding: 1rem;
+  font-family: "Open Sans";
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 239, 0, 0.272);
+}
+
+.tokenList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: scroll;
+  flex: 1;
+}
+
+.tokenItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+  color: gray;
+  padding-right: 0.5rem;
+}
+
+.tokenItem img {
+  border-radius: 0.4rem;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
+}
+
+.tokenItem span:nth-child(1) {
+  width: 5.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tokenItem span:nth-child(2) {
+  color: rgba(0, 239, 0, 0.813);
+}
+
+.titleRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.titleRow span {
+  width: 50%;
+}
+.titleRow span:nth-child(1) {
+  padding-left: 0.15rem;
+}
+.titleRow span:nth-child(2) {
+  text-align: end;
+  padding-right: 1.75rem;
+}
