@@ -1,0 +1,28 @@
+.queue {
+  width: 25rem;
+  background-color: rgb(26, 26, 26);
+  border-radius: 1rem;
+  color: white;
+  padding: 1rem;
+  font-family: "Open Sans";
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 239, 0, 0.272);
+}
+
+.queue h2 {
+  text-align: center;
+  color: rgb(223, 223, 223);
+  font-size: 20px;
+}
+
+.emptyQueue {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  gap: 0.25rem;
+  padding: 2rem 0rem;
+}

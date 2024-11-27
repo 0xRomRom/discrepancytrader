@@ -1,7 +1,7 @@
 import stl from "./Queue.module.css";
 import { GoInbox } from "react-icons/go";
 
-const Queue = ({ queueTokens }) => {
+const Queue = ({ queueTokens, setQueueTokens }) => {
   return (
     <div className={stl.queue}>
       <h2>Queue</h2>
