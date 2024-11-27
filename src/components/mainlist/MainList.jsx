@@ -1,5 +1,6 @@
 import stl from "./MainList.module.css";
 import { useState, useEffect } from "react";
+
 const MainList = ({ tokens, setTokens }) => {
   useEffect(() => {
     const initialize = async () => {
@@ -21,7 +22,7 @@ const MainList = ({ tokens, setTokens }) => {
             (pair) => pair.baseToken.symbol === token.symbol
           );
           const tokenPrice = tokenData
-            ? Number(tokenData.priceUsd).toFixed(4)
+            ? Number(tokenData.priceUsd).toFixed(6)
             : "0";
           return {
             ...token,
@@ -34,8 +35,15 @@ const MainList = ({ tokens, setTokens }) => {
         console.error("Error fetching API data:", error);
       }
     };
+
+    // Initialize on mount and every second
     initialize();
-  }, []);
+    const interval = setInterval(initialize, 1000);
+
+    // Clean up interval on unmount
+    return () => clearInterval(interval);
+  }, []); // Include tokens and setTokens as dependencies
+
   return (
     <div className={stl.modal}>
       <h2>Token Pairs</h2>

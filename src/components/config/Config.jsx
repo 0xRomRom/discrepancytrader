@@ -6,7 +6,7 @@ import bs58 from "bs58";
 const Config = () => {
   const [balance, setBalance] = useState(null);
   const privateKey = import.meta.env.VITE_PRIVATE_KEY;
-  console.log(privateKey);
+
   if (!privateKey) {
     throw new Error("Private key not found in .env file");
   }
