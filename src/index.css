@@ -31,3 +31,6 @@
   scrollbar-width: thin; /* Makes the scrollbar thin */
   scrollbar-color: #333 #000000; /* Thumb color and track color */
 }
+body {
+  overflow-x: hidden;
+}
